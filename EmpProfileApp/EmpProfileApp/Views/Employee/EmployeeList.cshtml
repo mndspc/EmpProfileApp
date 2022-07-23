@@ -1,0 +1,29 @@
+﻿@model List<EmpProfileApp.Models.EmpProfile>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee List</title>
+</head>
+<body>
+    <div><h3>Employee List</h3></div>
+    <table style="border:solid 5px blue">
+        <tr>
+            <th>CODE</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+        </tr>
+        @foreach(var emp in Model)
+            {
+                 <tr>
+                    <td>@emp.EmpCode</td>
+                     <td>@emp.EmpName</td>
+                     <td>@emp.Email</td>
+                 </tr>
+            }        
+    </table>
+</body>
+</html>
